@@ -1,7 +1,12 @@
 ﻿<Window x:Class="CodeWizards.Client.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="600" Width="800">
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:client="clr-namespace:CodeWizards.Client"
+        xmlns:contracts="clr-namespace:CodeWizards.Contracts;assembly=CodeWizardsContracts" mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800" d:DataContext="{d:DesignInstance client:MainViewModel}"
+        Loaded="OnLoaded" KeyUp="OnKeyUp">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
@@ -14,18 +19,23 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <StackPanel Grid.Row="0">
-                <TextBlock>Wizard 25 (50)</TextBlock>
-                <TextBlock>Ax0l0tl (10)</TextBlock>
-                <TextBlock>Mostley (20)</TextBlock>
-            </StackPanel>
+            <ListView Grid.Row="0" ItemsSource="{Binding Wizards}"/>
 
-            <StackPanel Grid.Row="1">
-                <TextBlock>Spell 56 on Stone 4</TextBlock>
-                <TextBlock>Spell 56 on Stone 2</TextBlock>
-                <TextBlock>Spell 57 on Stone 3</TextBlock>
-                <TextBlock>Spell 57 on Stone 6</TextBlock>
-            </StackPanel>
+            <ListView Grid.Row="1" ItemsSource="{Binding Spells}">
+                <ListView.ItemTemplate>
+                    <DataTemplate DataType="contracts:SpellInstance">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="16"/>
+                            </Grid.ColumnDefinitions>
+        
+                            <TextBlock Text="{Binding Name}"/>
+                            <Button Command="{x:Static client:UICommands.StopSpellCommand}" CommandParameter="{Binding}">X</Button>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </Grid>
 
         <Grid Grid.Column="1">
@@ -33,8 +43,8 @@
                 <RowDefinition/>
                 <RowDefinition Height="80"/>
             </Grid.RowDefinitions>
-            
-            <Grid Grid.Row="0" Name="GameMap"/>
+
+            <client:GameMap Grid.Row="0" x:Name="GameMap" WorldData="{Binding WorldData}"/>
             
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
