@@ -1,4 +1,6 @@
-﻿namespace CodeWizards.Contracts
+﻿using System;
+
+namespace CodeWizards.Contracts
 {
     using System.Runtime.Serialization;
 
@@ -20,6 +22,11 @@
             Y = y;
         }
 
-        // TODO: Math
+        public static Vector operator -(Vector v1, Vector v2)
+        {
+            return new Vector(v1.X - v2.X, v1.Y - v2.Y);
+        }
+
+        public double Length { get { return Math.Sqrt(X * X + Y * Y); } }
     }
 }
