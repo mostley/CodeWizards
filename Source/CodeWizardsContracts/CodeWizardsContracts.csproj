@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Notification.cs" />
     <Compile Include="SpellInstance.cs" />
     <Compile Include="WizardBody.cs" />
     <Compile Include="IMagic.cs" />

@@ -6,5 +6,6 @@
     {
         public List<SpellInstance> ActiveSpells { get; set; }
         public List<Entity> LastDelvedEntities { get; set; }
+        public List<Notification> Notifications { get; set; }
     }
 }
