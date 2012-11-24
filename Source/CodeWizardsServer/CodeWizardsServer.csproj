@@ -73,7 +73,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CodeWizardsClient\CodeWizardsContracts\CodeWizardsContracts.csproj">
+    <ProjectReference Include="..\CodeWizardsContracts\CodeWizardsContracts.csproj">
       <Project>{142B475B-15DB-46D3-86C4-202F05F5BEF0}</Project>
       <Name>CodeWizardsContracts</Name>
     </ProjectReference>

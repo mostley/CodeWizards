@@ -1,14 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeWizardsClient", "CodeWizardsClient.csproj", "{CE5BBA19-3656-435E-A827-60A9ABBDACFD}"
-	ProjectSection(ProjectDependencies) = postProject
-		{F188FC01-0C02-4DF7-A5A9-3F9EBF48CD7B} = {F188FC01-0C02-4DF7-A5A9-3F9EBF48CD7B}
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeWizardsServer", "..\CodeWizardsServer\CodeWizardsServer.csproj", "{F188FC01-0C02-4DF7-A5A9-3F9EBF48CD7B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeWizardsContracts", "CodeWizardsContracts\CodeWizardsContracts.csproj", "{142B475B-15DB-46D3-86C4-202F05F5BEF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeWizardsClient", "CodeWizardsClient\CodeWizardsClient.csproj", "{CE5BBA19-3656-435E-A827-60A9ABBDACFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeWizardsServer", "CodeWizardsServer\CodeWizardsServer.csproj", "{F188FC01-0C02-4DF7-A5A9-3F9EBF48CD7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +17,16 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Release|x86.ActiveCfg = Release|Any CPU
 		{CE5BBA19-3656-435E-A827-60A9ABBDACFD}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{CE5BBA19-3656-435E-A827-60A9ABBDACFD}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{CE5BBA19-3656-435E-A827-60A9ABBDACFD}.Debug|Mixed Platforms.Build.0 = Debug|x86
@@ -40,16 +47,6 @@ Global
 		{F188FC01-0C02-4DF7-A5A9-3F9EBF48CD7B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{F188FC01-0C02-4DF7-A5A9-3F9EBF48CD7B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{F188FC01-0C02-4DF7-A5A9-3F9EBF48CD7B}.Release|x86.ActiveCfg = Release|Any CPU
-		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{142B475B-15DB-46D3-86C4-202F05F5BEF0}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
