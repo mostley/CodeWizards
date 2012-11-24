@@ -1,8 +1,64 @@
 ﻿<Window x:Class="CodeWizards.Client.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="600" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0">
+                <TextBlock>Wizard 25 (50)</TextBlock>
+                <TextBlock>Ax0l0tl (10)</TextBlock>
+                <TextBlock>Mostley (20)</TextBlock>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1">
+                <TextBlock>Spell 56 on Stone 4</TextBlock>
+                <TextBlock>Spell 56 on Stone 2</TextBlock>
+                <TextBlock>Spell 57 on Stone 3</TextBlock>
+                <TextBlock>Spell 57 on Stone 6</TextBlock>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+            
+            <Grid Grid.Row="0" Name="GameMap"/>
+            
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <!-- TODO Wizard image -->
+                
+                <Grid Grid.Column="1" Height="50">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Button Grid.Column="0">Spell 1</Button>
+                    <Button Grid.Column="1">Spell 2</Button>
+                    <Button Grid.Column="2">Spell 3</Button>
+                    <Button Grid.Column="3">Spell 4</Button>
+                </Grid>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
